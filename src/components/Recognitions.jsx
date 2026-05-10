@@ -38,7 +38,7 @@ function Counter({ from, to, duration, suffix = "" }) {
   return (
     <span
       ref={nodeRef}
-      className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1B4332]"
+      className="font-playfair text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1B4332]"
     >
       {from}
       {suffix}
@@ -66,14 +66,14 @@ export default function Recognitions({ projectsCount = 25 }) {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#F0FDF4]" id="recognitions">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="py-12 md:py-24 bg-[#F0FDF4]" id="recognitions">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
           >
             Recognitions & Achievements
           </motion.h2>
@@ -86,7 +86,8 @@ export default function Recognitions({ projectsCount = 25 }) {
         </div>
 
         {/* Counters */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 text-center">
+        {/* Counters */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-12 md:mb-20 text-center">
           {stats.map((stat, idx) => (
             <motion.div
               key={idx}
@@ -102,7 +103,7 @@ export default function Recognitions({ projectsCount = 25 }) {
                 duration={2}
                 suffix={stat.suffix}
               />
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg font-inter text-gray-600 mt-2 font-medium uppercase tracking-wider">
+              <p className="text-[10px] sm:text-sm md:text-base lg:text-lg font-inter text-gray-600 mt-2 font-medium uppercase tracking-wider">
                 {stat.label}
               </p>
             </motion.div>

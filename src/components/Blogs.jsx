@@ -22,14 +22,14 @@ export default function Blogs() {
   }, [selectedBlog]);
 
   return (
-    <section className="py-16 md:py-24 bg-white" id="blogs">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="py-12 md:py-24 bg-white" id="blogs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-4"
+            className="text-2xl md:text-4xl font-playfair font-bold text-gray-900 mb-4"
           >
             Insights & Real Estate Trends
           </motion.h2>
@@ -72,10 +72,10 @@ export default function Blogs() {
                   <p className="text-sm text-gray-500 mb-2 font-inter">
                     {blog.date}
                   </p>
-                  <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1B4332] transition-colors line-clamp-2">
+                  <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#1B4332] transition-colors line-clamp-2">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 font-inter mb-6 line-clamp-2 flex-1">
+                  <p className="text-sm md:text-base text-gray-600 font-inter mb-6 line-clamp-2 flex-1">
                     {blog.summary}
                   </p>
                   <div className="flex items-center text-[#1B4332] font-medium text-sm group/btn mt-auto">

@@ -42,15 +42,15 @@ export default function StarProjects({ projects = [] }) {
   };
 
   return (
-    <section className="py-24 bg-white overflow-hidden" id="our-projects">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+    <section className="py-12 md:py-24 bg-white overflow-hidden" id="our-projects">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12">
           <div>
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
+              className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
             >
               Star Projects
             </motion.h2>
@@ -59,7 +59,7 @@ export default function StarProjects({ projects = [] }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-sm sm:text-base md:text-lg text-gray-600 font-inter max-w-xl"
+              className="text-xs sm:text-base md:text-lg text-gray-600 font-inter max-w-xl"
             >
               Discover our signature developments that redefine luxury and set
               new benchmarks in premium real estate.
@@ -85,17 +85,17 @@ export default function StarProjects({ projects = [] }) {
         {/* Carousel */}
         <motion.div
           ref={carouselRef}
-          className="flex overflow-x-hidden snap-x snap-mandatory hide-scrollbar gap-8 pb-8 cursor-grab active:cursor-grabbing"
+          className="flex overflow-x-hidden snap-x snap-mandatory hide-scrollbar gap-4 md:gap-8 pb-8 cursor-grab active:cursor-grabbing"
         >
           <motion.div
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
-            className="flex gap-8"
+            className="flex gap-4 md:gap-8"
           >
             {projects.length === 0 ? (
               // Skeleton State
               [1, 2, 3].map((i) => (
-                <div key={i} className="min-w-[300px] md:min-w-[400px]">
+                <div key={i} className="w-[280px] sm:w-[350px] md:w-[400px]">
                   <ProjectCardSkeleton />
                 </div>
               ))
@@ -107,10 +107,10 @@ export default function StarProjects({ projects = [] }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className="min-w-[300px] md:min-w-[400px] bg-white rounded-2xl overflow-hidden group hover:shadow-2xl transition-shadow duration-500 border border-gray-100 flex-shrink-0 snap-start relative"
+                  className="w-[280px] sm:w-[350px] md:w-[400px] bg-white rounded-2xl overflow-hidden group hover:shadow-2xl transition-shadow duration-500 border border-gray-100 shrink-0 snap-start relative"
                 >
                   {/* Image Container */}
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-48 sm:h-64 overflow-hidden">
                     <motion.div
                       className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                       style={{ backgroundImage: `url(${project.images[0]})` }}
@@ -122,15 +122,15 @@ export default function StarProjects({ projects = [] }) {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6">
-                    <h3 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#1B4332] transition-colors">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="font-playfair text-base sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#1B4332] transition-colors">
                       {project.name}
                     </h3>
-                    <div className="flex items-center text-gray-500 text-xs sm:text-sm md:text-base mb-4">
+                    <div className="flex items-center text-gray-500 text-[9px] sm:text-xs md:text-sm mb-4">
                       <span className="flex items-center gap-1">
                         <svg
-                          width="16"
-                          height="16"
+                          width="12"
+                          height="12"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"

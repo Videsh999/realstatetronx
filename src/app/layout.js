@@ -70,6 +70,14 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "TiPjWg0s02uRKePlyZnAJ4M0WOu8NFrWZMd2aNAGm80",
+  },
+  appleWebApp: {
+    title: SITE_CONFIG.name,
+    statusBarStyle: "default",
+    capable: true,
+  },
   manifest: "/manifest.json",
   icons: {
     icon: "/icon-512.png",
@@ -98,18 +106,6 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en" className="scroll-smooth">
-        <head>
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#1B4332" />
-          <meta
-            name="google-site-verification"
-            content="TiPjWg0s02uRKePlyZnAJ4M0WOu8NFrWZMd2aNAGm80"
-          />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-        </head>
         <body
           className={`${playfair.variable} ${inter.variable} font-inter antialiased`}
         >

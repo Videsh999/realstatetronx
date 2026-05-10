@@ -6,14 +6,14 @@ import { Star } from "lucide-react";
 
 export default function Testimonials() {
   return (
-    <section className="py-16 md:py-24 bg-[#F0FDF4]" id="testimonials">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="py-12 md:py-24 bg-[#F0FDF4]" id="testimonials">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
+            className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-gray-900 mb-4"
           >
             What People Say
           </motion.h2>
@@ -28,7 +28,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-sm sm:text-base md:text-lg text-gray-600 font-inter max-w-2xl mx-auto"
+            className="text-xs sm:text-base md:text-lg text-gray-600 font-inter max-w-2xl mx-auto"
           >
             Hear from our satisfied customers who have experienced the
             unparalleled quality and commitment of our real estate projects.
@@ -70,7 +70,7 @@ export default function Testimonials() {
               </div>
 
               {/* Text */}
-              <p className="text-xs sm:text-sm md:text-base text-gray-600 font-inter mb-8 italic relative z-10 leading-relaxed">
+              <p className="text-[11px] sm:text-sm md:text-base text-gray-600 font-inter mb-8 italic relative z-10 leading-relaxed">
                 &quot;{testimonial.text}&quot;
               </p>
 
@@ -82,7 +82,7 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full object-cover border-2 border-[#1B4332]/20"
                 />
                 <div>
-                  <h4 className="font-playfair font-bold text-base sm:text-lg md:text-xl text-gray-900">
+                  <h4 className="font-playfair font-bold text-sm sm:text-lg md:text-xl text-gray-900">
                     {testimonial.name}
                   </h4>
                   <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 font-inter uppercase tracking-wide">

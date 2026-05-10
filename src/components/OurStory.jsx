@@ -9,9 +9,9 @@ const GridItem = ({ children, index, type = "text" }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
-      className={`relative min-h-[300px] md:min-h-[350px] flex rounded-xl overflow-hidden ${
+      className={`relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] flex rounded-xl overflow-hidden ${
         type === "text"
-          ? "bg-white shadow-xl p-8 md:p-10 flex-col justify-center text-center border border-gray-100"
+          ? "bg-white shadow-xl p-6 sm:p-8 md:p-10 flex-col justify-center text-center border border-gray-100"
           : "shadow-lg group"
       }`}
     >
@@ -59,12 +59,12 @@ export default function OurStory() {
 
   return (
     <section
-      className="py-16 md:py-24 bg-[#f8f8f6] flex flex-col justify-center"
+      className="py-12 md:py-24 bg-[#f8f8f6] flex flex-col justify-center"
       id="our-story"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -78,7 +78,7 @@ export default function OurStory() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-6"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-6"
           >
             The Heart of Our Story
           </motion.h2>
@@ -103,10 +103,10 @@ export default function OurStory() {
                 />
               ) : (
                 <>
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-playfair font-bold text-gray-900 mb-3 italic">
+                  <h3 className="text-base sm:text-xl md:text-2xl font-playfair font-bold text-gray-900 mb-3 italic">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm md:text-base text-gray-600 font-inter leading-relaxed">
+                  <p className="text-[11px] sm:text-sm md:text-base text-gray-600 font-inter leading-relaxed">
                     {item.content}
                   </p>
                 </>

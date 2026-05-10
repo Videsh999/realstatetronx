@@ -17,23 +17,23 @@ export default function Newsletter({ projects = [] }) {
 
   return (
     <section
-      className="py-16 md:py-32 bg-[#FDFCFB] relative overflow-hidden"
+      className="py-12 md:py-24 bg-[#FDFCFB] relative overflow-hidden"
       id="newsletter"
     >
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#1B4332] rounded-[3.5rem] p-8 md:p-16 lg:p-24 shadow-[0_40px_100px_rgba(27,67,50,0.25)] relative overflow-hidden"
+          className="bg-[#1B4332] rounded-[2rem] sm:rounded-[3.5rem] p-6 sm:p-10 md:p-16 lg:p-24 shadow-[0_40px_100px_rgba(27,67,50,0.25)] relative overflow-hidden"
         >
           {/* Decorative Background */}
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-green-400 opacity-[0.03] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#C5A059] opacity-[0.05] rounded-full blur-[150px] translate-x-1/2 translate-y-1/2" />
           
           <div className="relative z-10">
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-20">
               
               {/* Part 1: Content & Heading */}
               <div className="lg:w-1/2 text-center lg:text-left">
@@ -42,7 +42,7 @@ export default function Newsletter({ projects = [] }) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="inline-flex items-center gap-2 px-5 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-8"
+                  className="inline-flex items-center gap-2 px-5 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10 mb-4 md:mb-8"
                 >
                   <div className="w-1.5 h-1.5 bg-[#C5A059] rounded-full animate-pulse" />
                   <span className="text-[#C5A059] text-[10px] font-black uppercase tracking-[0.4em]">Become a Member</span>
@@ -53,7 +53,7 @@ export default function Newsletter({ projects = [] }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
-                  className="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-8 leading-[1.1]"
+                  className="text-2xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-4 md:mb-8 leading-[1.1]"
                 >
                   Join the <span className="text-green-400 italic">Ventrivo</span> Family
                 </motion.h2>
@@ -63,7 +63,7 @@ export default function Newsletter({ projects = [] }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
-                  className="text-gray-300 font-inter mb-10 text-base md:text-lg lg:text-xl leading-relaxed font-light"
+                  className="text-gray-300 font-inter mb-6 md:mb-10 text-sm md:text-lg lg:text-xl leading-relaxed font-light"
                 >
                   At <strong className="text-white font-bold">Ventrivo Group</strong>, we build foundations for generations. 
                   By choosing a venture with us, you join a family committed to prosperity, 
@@ -78,7 +78,7 @@ export default function Newsletter({ projects = [] }) {
                 >
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="group relative px-10 py-5 bg-[#C5A059] text-white rounded-2xl font-inter font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-4 transition-all hover:bg-[#b08d4a] hover:-translate-y-1 shadow-[0_20px_40px_rgba(197,160,89,0.3)] w-full sm:w-auto"
+                    className="group relative px-8 py-4 md:px-10 md:py-5 bg-[#C5A059] text-white rounded-2xl font-inter font-bold text-xs md:text-sm tracking-widest uppercase flex items-center justify-center gap-4 transition-all hover:bg-[#b08d4a] hover:-translate-y-1 shadow-[0_20px_40px_rgba(197,160,89,0.3)] w-full sm:w-auto"
                   >
                     Secure Your Plot
                     <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform" />
@@ -88,7 +88,7 @@ export default function Newsletter({ projects = [] }) {
 
               {/* Part 2: Values Grid */}
               <div className="lg:w-1/2 w-full">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-6">
                   {[
                     { icon: Landmark, title: "Heritage Status", desc: "Plots designed to appreciate through generations." },
                     { icon: ShieldCheck, title: "Utmost Security", desc: "Secured with 24/7 surveillance and gated care." },
@@ -101,13 +101,13 @@ export default function Newsletter({ projects = [] }) {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + idx * 0.1 }}
-                      className="flex flex-col items-center lg:items-start gap-3 p-6 rounded-3xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all group/item"
+                      className="flex flex-col items-center lg:items-start gap-2 md:gap-3 p-4 md:p-6 rounded-3xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all group/item"
                     >
-                      <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-green-300 group-hover/item:text-[#C5A059] transition-all duration-300">
-                        <item.icon size={24} />
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-white/5 rounded-2xl flex items-center justify-center text-green-300 group-hover/item:text-[#C5A059] transition-all duration-300">
+                        <item.icon size={20} className="md:w-6 md:h-6" />
                       </div>
-                      <h4 className="text-white font-bold font-inter text-xs uppercase tracking-wider">{item.title}</h4>
-                      <p className="text-gray-400 text-[11px] font-inter leading-relaxed opacity-70 group-hover/item:opacity-100 transition-opacity text-center lg:text-left">
+                      <h4 className="text-white font-bold font-inter text-[10px] md:text-xs uppercase tracking-wider">{item.title}</h4>
+                      <p className="text-gray-400 text-[9px] md:text-[11px] font-inter leading-relaxed opacity-70 group-hover/item:opacity-100 transition-opacity text-center lg:text-left">
                         {item.desc}
                       </p>
                     </motion.div>

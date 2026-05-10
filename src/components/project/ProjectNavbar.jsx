@@ -83,8 +83,8 @@ export default function ProjectNavbar({ layoutSvg }) {
         <>
             <nav
                 className={`${isSticky
-                    ? "fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/30 shadow-xl py-3 md:py-4"
-                    : "relative z-40 bg-white border-b border-gray-100 py-4 md:py-6"
+                    ? "fixed top-0 left-0 right-0 z-1001 bg-white/10 backdrop-blur-md border-b border-white/30 shadow-xl py-3 md:py-4"
+                    : "relative z-1001 bg-white border-b border-gray-100 py-4 md:py-6"
                     } transition-all duration-500 px-4 sm:px-6`}
             >
                 <div className="max-w-7xl mx-auto flex flex-row items-center justify-between lg:justify-between gap-2 w-full">
