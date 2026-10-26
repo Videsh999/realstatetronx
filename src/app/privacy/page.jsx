@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
     {
       icon: <ShieldCheck className="text-[#C5A059]" size={24} />,
       title: "5. Your Privacy Rights",
-      content: "You have the right to access, update, or delete your personal information. If you wish to exercise any of these rights, please contact us at privacy@ventrivo.com."
+      content: "You have the right to access, update, or delete your personal information. If you wish to exercise any of these rights, please contact us at videshthota889@gmail.com."
     }
   ];
 
@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
               We are committed to resolving any privacy-related issues promptly. Feel free to reach out.
             </p>
             <a 
-              href="mailto:privacy@ventrivo.com"
+              href="mailto:videshthota889@gmail.com"
               className="inline-block px-10 py-4 bg-[#1B4332] text-white rounded-full font-bold tracking-widest uppercase text-sm hover:bg-[#133024] transition-all shadow-xl shadow-[#1B4332]/20"
             >
               Email Privacy Team

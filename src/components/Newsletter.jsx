@@ -55,7 +55,7 @@ export default function Newsletter({ projects = [] }) {
                   transition={{ delay: 0.3 }}
                   className="text-2xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-4 md:mb-8 leading-[1.1]"
                 >
-                  Join the <span className="text-green-400 italic">Ventrivo</span> Family
+                  Join the <span className="text-green-400 italic">Tronx</span> Family
                 </motion.h2>
 
                 <motion.p
@@ -65,7 +65,7 @@ export default function Newsletter({ projects = [] }) {
                   transition={{ delay: 0.4 }}
                   className="text-gray-300 font-inter mb-6 md:mb-10 text-sm md:text-lg lg:text-xl leading-relaxed font-light"
                 >
-                  At <strong className="text-white font-bold">Ventrivo Group</strong>, we build foundations for generations. 
+                  At <strong className="text-white font-bold">Tronx Group</strong>, we build foundations for generations. 
                   By choosing a venture with us, you join a family committed to prosperity, 
                   security, and premium living. Start your journey toward a lasting legacy today.
                 </motion.p>
@@ -117,7 +117,7 @@ export default function Newsletter({ projects = [] }) {
                 <div className="mt-12 flex flex-col items-center lg:items-start gap-4">
                   <div className="w-full lg:w-32 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent lg:from-white/20 lg:to-transparent" />
                   <p className="text-white/30 text-[8px] font-black font-inter tracking-[0.4em] uppercase">
-                    The Gold Standard &bull; Ventrivo Group
+                    The Gold Standard &bull; Tronx Group
                   </p>
                 </div>
               </div>

@@ -1,10 +1,12 @@
 import { Suspense } from "react";
-import { Playfair_Display, Inter } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 import ProgressBar from "@/components/ProgressBar";
 import Navbar from "@/components/Navbar";
+import Providers from "@/components/Providers";
+import { isClerkEnabled } from "@/lib/auth-mode";
+import { SITE_CONFIG } from "@/lib/seo-config";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -12,13 +14,11 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
 });
-
-import { SITE_CONFIG } from "@/lib/seo-config";
 
 export const metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
@@ -38,7 +38,7 @@ export const metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
     title: `${SITE_CONFIG.name} | ${SITE_CONFIG.titleSuffix}`,
@@ -70,9 +70,6 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "TiPjWg0s02uRKePlyZnAJ4M0WOu8NFrWZMd2aNAGm80",
-  },
   appleWebApp: {
     title: SITE_CONFIG.name,
     statusBarStyle: "default",
@@ -88,50 +85,39 @@ export const metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "RealEstateAgent",
   name: SITE_CONFIG.name,
   url: SITE_CONFIG.url,
-  logo: `${SITE_CONFIG.url}/icon-512.png`, // Adjust if logo is different
+  logo: `${SITE_CONFIG.url}/icon-512.png`,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: SITE_CONFIG.contact.phone,
     contactType: "customer service",
     areaServed: "IN",
-    availableLanguage: "en",
+    availableLanguage: ["en", "hi", "te"],
   },
   sameAs: Object.values(SITE_CONFIG.socials),
 };
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <html lang="en" className="scroll-smooth">
-        <body
-          className={`${playfair.variable} ${inter.variable} font-inter antialiased`}
-        >
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${playfair.variable} ${dmSans.variable} font-inter antialiased bg-white text-[#1A1A1A]`}
+      >
+        <Providers clerkEnabled={isClerkEnabled()}>
           <Suspense fallback={null}>
             <ProgressBar />
           </Suspense>
-          <Navbar/>
+          <Navbar />
           {children}
           <ScrollToTop />
           <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                if ('serviceWorker' in navigator) {
-                  window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                    }, function(err) {
-                      console.log('ServiceWorker registration failed: ', err);
-                    });
-                  });
-                }
-              `,
-            }}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           />
-        </body>
-      </html>
-    </ClerkProvider>
+        </Providers>
+      </body>
+    </html>
   );
 }

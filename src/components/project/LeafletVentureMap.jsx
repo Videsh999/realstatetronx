@@ -273,7 +273,7 @@ const PlotPopup = React.memo(
             <div className="bg-white rounded-2xl w-full max-w-md p-6 relative animate-in zoom-in duration-200">
               <ReservationForm
                 plotNumber={info.plotNumber}
-                projectSlug={info.projectSlug || "ugadi-ventures"}
+                projectSlug={info.projectSlug || "vinnu-ventures"}
                 onCancel={() => setShowReservationForm(false)}
                 onSubmit={(updatedData) => {
                   setShowReservationForm(false);
@@ -291,7 +291,7 @@ PlotPopup.displayName = "PlotPopup";
 
 // --- Main Component ---
 
-export default function LeafletVentureMap({ projectSlug = "ugadi-ventures" }) {
+export default function LeafletVentureMap({ projectSlug = "vinnu-ventures" }) {
   const [geoData, setGeoData] = useState({
     plots: null,
     roads: null,

@@ -16,7 +16,7 @@ Key reasons why investors are flocking to plots:
 3. **Total Creative Control**: Owners have the freedom to build their dream homes according to their personal taste and timeline.
 4. **Resale Value**: The demand for land in strategic locations remains consistently high, ensuring a liquid asset for your portfolio.
 
-At Ventrivo, we curate premium plotted developments in high-growth corridors, ensuring your investment is backed by infrastructure and accessibility.`
+At Tronx, we curate premium plotted developments in high-growth corridors, ensuring your investment is backed by infrastructure and accessibility.`
   },
   {
     id: 2,
@@ -94,7 +94,7 @@ Staying ahead of these trends allows investors to make choices that align with t
 - **Design Freedom**: Total control over the architecture and landscaping.
 - **No Monthly Maintenance**: Freedom from community rules and recurring association fees.
 
-Ventrivo's gated plotted developments give you the best of both worlds: the security of a community with the freedom to build your custom independent home.`
+Tronx's gated plotted developments give you the best of both worlds: the security of a community with the freedom to build your custom independent home.`
   },
   {
     id: 6,
@@ -114,6 +114,6 @@ Smart strategies for beginners:
 4. **Long-Term Perspective**: Real estate is a marathon, not a sprint. Look at the 5-10 year growth potential.
 5. **Partner with Trusted Developers**: Ensure the brand you invest with has a track record of delivery and transparency.
 
-Ventrivo is committed to guiding first-time investors through their journey with honesty and expertise.`
+Tronx is committed to guiding first-time investors through their journey with honesty and expertise.`
   },
 ];

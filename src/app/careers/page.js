@@ -30,12 +30,12 @@ const pillars = [
   {
     icon: <Globe className="w-8 h-8" />,
     title: "National Pride",
-    text: "VENTRIVO is built by Indians, for Indians. We take immense pride in shaping communities and legacies that define the future of our country.",
+    text: "TRONX is built by Indians, for Indians. We take immense pride in shaping communities and legacies that define the future of our country.",
   },
   {
     icon: <Users className="w-8 h-8" />,
     title: "Collaborative Evolution",
-    text: "We don't just offer jobs; we offer a platform to learn, lead, and evolve. At VENTRIVO, every individual is empowered to own their ideas.",
+    text: "We don't just offer jobs; we offer a platform to learn, lead, and evolve. At TRONX, every individual is empowered to own their ideas.",
   },
 ];
 
@@ -52,14 +52,14 @@ export default function CareerPage() {
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <motion.div {...fadeInUp}>
             <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-[#C5A059] text-sm font-bold tracking-widest uppercase mb-6 backdrop-blur-sm border border-white/10">
-              The VENTRIVO Journey
+              The TRONX Journey
             </span>
             <h1 className="text-4xl md:text-7xl font-playfair font-bold text-white mb-8 leading-tight">
               Build a Future <br />
               <span className="text-[#C5A059]">That Lasts Generations</span>
             </h1>
             <p className="text-gray-300 font-inter text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
-              At VENTRIVO, we build more than premium real estate. We build
+              At TRONX, we build more than premium real estate. We build
               careers with purpose, lives with meaning, and legacies that
               endure.
             </p>
@@ -126,7 +126,7 @@ export default function CareerPage() {
               <div className="absolute inset-0 bg-[#1B4332]/20 group-hover:bg-transparent transition-colors duration-500" />
               <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/90 backdrop-blur-md rounded-2xl border border-white/50 shadow-xl">
                 <p className="italic text-gray-800 text-lg font-playfair font-medium">
-                  &quot;At VENTRIVO, we believe in growing together. We encourage
+                  &quot;At TRONX, we believe in growing together. We encourage
                   ownership, value ideas, and recognize performance at every
                   scale.&quot;
                 </p>
@@ -197,7 +197,7 @@ export default function CareerPage() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <a
-                  href="mailto:careers@ventrivo.com"
+                  href="mailto:videshthota889@gmail.com"
                   className="bg-[#C5A059] text-white px-12 py-5 rounded-full font-black text-lg hover:bg-[#b38f4d] transition-all transform hover:scale-105 shadow-xl"
                 >
                   Join the Collective Vision

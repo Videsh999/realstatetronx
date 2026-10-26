@@ -1,12 +1,14 @@
 {
-  "name": "latest",
-  "version": "0.1.0",
+  "name": "realestatetronx",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "seed": "node scripts/seed.js",
+    "db:check": "node check_db.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^7.0.1",

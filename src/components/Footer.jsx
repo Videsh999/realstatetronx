@@ -8,6 +8,7 @@ import {
   Mail,
 } from "lucide-react";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/seo-config";
 
 export default function Footer() {
   return (
@@ -18,7 +19,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold font-playfair tracking-tight text-white">
-                <span className="text-green-400">VEN</span>TRIVO
+                <span className="text-green-400">TRO</span>NX
               </span>
             </div>
             <p className="text-gray-200 font-inter leading-relaxed text-sm opacity-80">
@@ -64,6 +65,7 @@ export default function Footer() {
             <h4 className="font-playfair text-xl font-bold text-white mb-6">
               Contact Us
             </h4>
+            <p className="text-green-300 font-inter text-sm mb-4 opacity-90">Videsh</p>
             <ul className="space-y-5 font-inter text-gray-200 text-sm opacity-80">
               <li className="flex items-start gap-3">
                 <MapPin className="text-green-400 shrink-0 mt-0.5" size={18} />
@@ -76,19 +78,19 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="text-green-400 shrink-0" size={18} />
                 <a
-                  href="tel:+919652776025"
+                  href={`tel:${SITE_CONFIG.contact.phoneHref}`}
                   className="hover:text-green-400 transition-colors"
                 >
-                  +91 9652776025
+                  {SITE_CONFIG.contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-green-400 shrink-0" size={18} />
                 <a
-                  href="mailto:info@ventrivo.com"
+                  href={`mailto:${SITE_CONFIG.contact.email}`}
                   className="hover:text-green-400 transition-colors"
                 >
-                  info@ventrivo.com
+                  {SITE_CONFIG.contact.email}
                 </a>
               </li>
             </ul>
@@ -126,7 +128,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400 font-inter">
-          <p>&copy; 2026 VENTRIVO. All Rights Reserved.</p>
+          <p>&copy; 2026 TRONX. All Rights Reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-green-400 transition-colors">
               Privacy Policy

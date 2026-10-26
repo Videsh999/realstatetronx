@@ -10,7 +10,7 @@ export default function TermsOfService() {
     {
       icon: <FileText className="text-[#C5A059]" size={24} />,
       title: "1. Acceptance of Terms",
-      content: "By accessing and using Ventrivo&apos;s services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please refrain from using our platform. These terms apply to all visitors, users, and others who access or use our services."
+      content: "By accessing and using Tronx&apos;s services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please refrain from using our platform. These terms apply to all visitors, users, and others who access or use our services."
     },
     {
       icon: <Shield className="text-[#C5A059]" size={24} />,
@@ -20,12 +20,12 @@ export default function TermsOfService() {
     {
       icon: <Scale className="text-[#C5A059]" size={24} />,
       title: "3. Property Listings",
-      content: "While we strive for accuracy, property listings, prices, and availability are subject to change without notice. Ventrivo does not warrant the completeness or accuracy of the information provided in property descriptions."
+      content: "While we strive for accuracy, property listings, prices, and availability are subject to change without notice. Tronx does not warrant the completeness or accuracy of the information provided in property descriptions."
     },
     {
       icon: <AlertCircle className="text-[#C5A059]" size={24} />,
       title: "4. Limitation of Liability",
-      content: "Ventrivo shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use our services, even if we have been advised of the possibility of such damages."
+      content: "Tronx shall not be liable for any direct, indirect, incidental, special, or consequential damages arising out of the use or inability to use our services, even if we have been advised of the possibility of such damages."
     }
   ];
 
@@ -96,7 +96,7 @@ export default function TermsOfService() {
               If you have any questions regarding these Terms of Service, please contact our legal team.
             </p>
             <a 
-              href="mailto:legal@ventrivo.com"
+              href="mailto:videshthota889@gmail.com"
               className="inline-block px-10 py-4 bg-[#1B4332] text-white rounded-full font-bold tracking-widest uppercase text-sm hover:bg-[#133024] transition-all shadow-xl shadow-[#1B4332]/20"
             >
               Contact Legal Dept

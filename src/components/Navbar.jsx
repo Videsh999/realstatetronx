@@ -92,8 +92,8 @@ export default function Navbar({ isAbsolute: isAbsoluteProp = false }) {
         className={`${isAbsolute ? "absolute" : "fixed"} top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 py-3 md:py-4 mx-auto max-w-7xl md:rounded-b-xl lg:rounded-full md:mt-4 transition-all duration-300 bg-white/10 backdrop-blur-md border border-white/30 shadow-[0_2px_20px_rgb(0,0,0,0.04)]`}
       >
       <Link href="/" className="flex items-center space-x-2 cursor-pointer">
-        <span className={`text-2xl font-bold font-playfair tracking-tight ${scrolled ? "text-gray-500" : "text-white/90"}`}>
-          <span className={scrolled ? "text-green-900" : "text-white"}>VEN</span>TRIVO
+        <span className={`text-2xl font-bold font-playfair tracking-tight ${scrolled ? "text-gray-800" : "text-white/90"}`}>
+          <span className={scrolled ? "text-green-900" : "text-white"}>TRO</span>NX
         </span>
       </Link>
 

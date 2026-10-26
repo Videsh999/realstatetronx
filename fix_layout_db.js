@@ -10,7 +10,7 @@ async function fixDb() {
     
     // Update any project pointing to the SVG layout to use the PNG layout
     const result = await db.collection('projects').updateMany(
-      { layoutSvg: { $in: ["/PYALAKURTI_LAYOUT.svg", "/layouts/ugadi-layout.svg"] } },
+      { layoutSvg: { $in: ["/PYALAKURTI_LAYOUT.svg", "/PYALAKURTI_LAYOUT.svg"] } },
       { $set: { layoutSvg: "/PYALAKURTI  VENTURE LAYOUT.png" } }
     );
     

@@ -9,7 +9,7 @@ import path from "path";
 export async function POST(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const projectSlug = searchParams.get("projectSlug") || "ugadi-ventures";
+    const projectSlug = searchParams.get("projectSlug") || "vinnu-ventures";
 
     await dbConnect();
     const project = await Project.findOne({ slug: projectSlug });

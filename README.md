@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tronx — Real Estate (Tronx)
 
-## Getting Started
+Premium plot & venture platform with interactive layouts, enquiries, and an admin portal.
 
-First, run the development server:
+## Quick start
 
 ```bash
+cp .env.example .env.local
+# Ensure MongoDB is running locally, then:
+npm install
+npm run seed
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Admin (demo mode)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Without Clerk keys, sign in at [/sign-in](http://localhost:3000/sign-in) using `ADMIN_PASSWORD` from `.env.local` (default: `tronx-admin-2026`).
 
-## Learn More
+### Production auth (Clerk)
 
-To learn more about Next.js, take a look at the following resources:
+1. Create an app at [dashboard.clerk.com](https://dashboard.clerk.com)
+2. Add `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY`
+3. Set a user’s `publicMetadata.role` to `"admin"`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Variable | Required | Purpose |
+|---|---|---|
+| `MONGO_URI` | Yes | MongoDB connection string |
+| `NEXT_PUBLIC_SITE_URL` | Yes | Canonical site URL |
+| `ADMIN_PASSWORD` | Demo | Admin password when Clerk is off |
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Prod | Clerk publishable key |
+| `CLERK_SECRET_KEY` | Prod | Clerk secret key |
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 15 · React 19 · MongoDB/Mongoose · Clerk · Tailwind CSS 4 · Framer Motion · Leaflet

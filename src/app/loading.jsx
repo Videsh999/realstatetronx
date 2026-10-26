@@ -30,7 +30,7 @@ export default function Loading() {
             }}
             className="text-4xl md:text-5xl font-bold font-playfair tracking-[0.2em] text-[#1B4332]"
           >
-            VEN<span className="text-[#C5A059]">TRIVO</span>
+            TRO<span className="text-[#C5A059]">NX</span>
           </motion.div>
           
           {/* Minimalist Subtext */}

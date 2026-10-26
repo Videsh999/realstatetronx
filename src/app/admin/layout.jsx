@@ -2,10 +2,12 @@ import AdminLayoutClient from "@/components/admin/AdminLayoutClient";
 import { checkAdminStatus } from "@/utils/actions/admin";
 import AccessDenied from "@/components/admin/AccessDenied";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
-  title: "Admin Dashboard | Ventrivo",
+  title: "Admin Dashboard | Tronx",
   description:
-    "Administrative portal for managing Ventrivo projects and plots.",
+    "Administrative portal for managing Tronx projects and plots.",
 };
 
 export default async function AdminLayout({ children }) {

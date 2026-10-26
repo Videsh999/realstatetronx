@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ventrivo-cache-v1';
+const CACHE_NAME = 'tronx-cache-v1';
 const urlsToCache = [
   '/',
   '/globals.css',

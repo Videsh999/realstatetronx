@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import HeroCarousel from "../components/HeroCarousel";
 import Recognitions from "../components/Recognitions";
 import StarProjects from "../components/StarProjects";
@@ -8,11 +7,10 @@ import Testimonials from "../components/Testimonials";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { getProjects } from "@/utils/data/projects";
-
 import { SITE_CONFIG } from "@/lib/seo-config";
 
 export const metadata = {
-  title: "Modern Luxury Real Estate", // This will be prefixed by "LuxEstate | " due to template
+  title: "Premium Plots & Luxury Living",
   description: SITE_CONFIG.description,
   keywords: SITE_CONFIG.keywords,
   openGraph: {

@@ -1,0 +1,166 @@
+[
+  {
+    "_id": "6adf0ed6e4413467c1772351",
+    "name": "Vinnu Ventures",
+    "slug": "vinnu-ventures",
+    "location": "Pyalakurti, Kodumur Mandal, Kurnool District, AP",
+    "description": "A premium residential venture offering well-planned plots with modern amenities and excellent connectivity. Vinnu Ventures is designed for those seeking a peaceful and comfortable lifestyle.",
+    "heroImage": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2000&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560520141-949673906370?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "layoutSvg": "/PYALAKURTI_LAYOUT.svg",
+    "totalPlots": 15,
+    "totalAcres": 4.2,
+    "amenities": [
+      {
+        "title": "Gated Community",
+        "description": "Secure and safe environment with 24/7 security.",
+        "icon": "ShieldCheck",
+        "_id": "6adf0ed6e4413467c1772352"
+      },
+      {
+        "title": "Parks & Greenery",
+        "description": "Lush green parks and landscaped gardens.",
+        "icon": "Trees",
+        "_id": "6adf0ed6e4413467c1772353"
+      },
+      {
+        "title": "Avenue Plantation",
+        "description": "Beautiful trees planted along the roads.",
+        "icon": "Leaf",
+        "_id": "6adf0ed6e4413467c1772354"
+      },
+      {
+        "title": "BT Roads",
+        "description": "Wide black-top roads for smooth transit.",
+        "icon": "Road",
+        "_id": "6adf0ed6e4413467c1772355"
+      },
+      {
+        "title": "Water Tank",
+        "description": "Dedicated overhead tank for continuous water.",
+        "icon": "Droplets",
+        "_id": "6adf0ed6e4413467c1772356"
+      },
+      {
+        "title": "Electricity",
+        "description": "Solar street lights and underground electrical lines.",
+        "icon": "Zap",
+        "_id": "6adf0ed6e4413467c1772357"
+      }
+    ],
+    "locationHighlights": [
+      {
+        "title": "Kurnool Railway Station",
+        "description": "Major transit hub connecting to Hyderabad and Bangalore.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Railway_station_in_kurnool_city.jpg",
+        "distance": "28 km",
+        "_id": "6adf0ed6e4413467c1772358"
+      },
+      {
+        "title": "NH-44 Highway",
+        "description": "Excellent highway connectivity for effortless travel.",
+        "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000&auto=format&fit=crop",
+        "distance": "12 km",
+        "_id": "6adf0ed6e4413467c1772359"
+      },
+      {
+        "title": "Kodumur Town",
+        "description": "Nearby markets, schools, and daily essentials.",
+        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000&auto=format&fit=crop",
+        "distance": "8 km",
+        "_id": "6adf0ed6e4413467c177235a"
+      }
+    ],
+    "latitude": 15.6919,
+    "longitude": 77.7731,
+    "createdAt": "2026-10-26T08:27:02.150Z",
+    "updatedAt": "2026-10-26T08:27:02.150Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adf0ed6e4413467c177236e",
+    "name": "Esh Ventures",
+    "slug": "esh-ventures",
+    "location": "Kodumur Road, Kurnool District, AP",
+    "description": "A thoughtfully planned plotted community with wide roads, green belts, and strong growth potential. Esh Ventures blends modern living with lasting investment value.",
+    "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "layoutSvg": "/PYALAKURTI_LAYOUT.svg",
+    "totalPlots": 15,
+    "totalAcres": 3.8,
+    "amenities": [
+      {
+        "title": "Gated Community",
+        "description": "Secure and safe environment with 24/7 security.",
+        "icon": "ShieldCheck",
+        "_id": "6adf0ed6e4413467c177236f"
+      },
+      {
+        "title": "Parks & Greenery",
+        "description": "Lush green parks and landscaped gardens.",
+        "icon": "Trees",
+        "_id": "6adf0ed6e4413467c1772370"
+      },
+      {
+        "title": "Avenue Plantation",
+        "description": "Beautiful trees planted along the roads.",
+        "icon": "Leaf",
+        "_id": "6adf0ed6e4413467c1772371"
+      },
+      {
+        "title": "BT Roads",
+        "description": "Wide black-top roads for smooth transit.",
+        "icon": "Road",
+        "_id": "6adf0ed6e4413467c1772372"
+      },
+      {
+        "title": "Water Tank",
+        "description": "Dedicated overhead tank for continuous water.",
+        "icon": "Droplets",
+        "_id": "6adf0ed6e4413467c1772373"
+      },
+      {
+        "title": "Electricity",
+        "description": "Solar street lights and underground electrical lines.",
+        "icon": "Zap",
+        "_id": "6adf0ed6e4413467c1772374"
+      }
+    ],
+    "locationHighlights": [
+      {
+        "title": "Kurnool Railway Station",
+        "description": "Major transit hub connecting to Hyderabad and Bangalore.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Railway_station_in_kurnool_city.jpg",
+        "distance": "28 km",
+        "_id": "6adf0ed6e4413467c1772375"
+      },
+      {
+        "title": "NH-44 Highway",
+        "description": "Excellent highway connectivity for effortless travel.",
+        "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000&auto=format&fit=crop",
+        "distance": "12 km",
+        "_id": "6adf0ed6e4413467c1772376"
+      },
+      {
+        "title": "Kodumur Town",
+        "description": "Nearby markets, schools, and daily essentials.",
+        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1000&auto=format&fit=crop",
+        "distance": "8 km",
+        "_id": "6adf0ed6e4413467c1772377"
+      }
+    ],
+    "latitude": 15.7,
+    "longitude": 77.78,
+    "createdAt": "2026-10-26T08:27:02.169Z",
+    "updatedAt": "2026-10-26T08:27:02.169Z",
+    "__v": 0
+  }
+]

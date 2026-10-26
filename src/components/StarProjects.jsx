@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, mapPin } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ProjectCardSkeleton } from "./Skeleton";
 

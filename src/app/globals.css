@@ -1,32 +1,27 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #1A1A1A;
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --brand: #1b4332;
+  --brand-soft: #f0fdf4;
+  --brand-mid: #2d6a4f;
 }
 
 @theme block {
-  --color-brand-primary: #1B4332;
-  --color-[#1B4332]: #1B4332;
-  --color-brand-secondary: #F0FDF4;
-
+  --color-brand-primary: #1b4332;
+  --color-[#1B4332]: #1b4332;
+  --color-brand-secondary: #f0fdf4;
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #FFFFFF;
-    --foreground: #1A1A1A;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  text-rendering: optimizeLegibility;
 }
 
-/* Custom Utilities */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -40,7 +35,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ensure all clickable elements have a pointer cursor */
 a,
 button,
 [role="button"],
@@ -51,18 +45,15 @@ summary {
   cursor: pointer;
 }
 
-/* Ensure interactive elements that might be used as buttons also have a pointer */
 .clickable,
 [onclick] {
   cursor: pointer;
 }
 
-/* Shimmer Animation for Skeletons */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
   }
-
   100% {
     background-position: 1000px 0;
   }
@@ -70,7 +61,13 @@ summary {
 
 .animate-shimmer {
   animation: shimmer 2s infinite linear;
-  background: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
   background-size: 1000px 100%;
 }
 
@@ -81,23 +78,7 @@ summary {
   overflow: hidden;
 }
 
-.skeleton::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  animation: skeleton-shimmer 1.5s infinite;
-}
-
-@keyframes skeleton-shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
+::selection {
+  background: color-mix(in srgb, var(--brand) 25%, white);
+  color: var(--brand);
 }

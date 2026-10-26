@@ -2,19 +2,37 @@
 
 import dbConnect from "@/lib/mongodb";
 import { revalidatePath } from "next/cache";
-import { auth, clerkClient } from "@clerk/nextjs/server";
+import { cookies } from "next/headers";
 import { serialize } from "../serialization";
+import {
+  DEMO_ADMIN_COOKIE,
+  getDemoAdminPassword,
+  isClerkEnabled,
+} from "@/lib/auth-mode";
+
+async function getClerkAuth() {
+  const { auth, clerkClient } = await import("@clerk/nextjs/server");
+  return { auth, clerkClient };
+}
 
 /**
  * Helper to verify admin role (throws error if not admin)
  */
 export async function verifyAdmin() {
+  if (!isClerkEnabled()) {
+    const jar = await cookies();
+    const session = jar.get(DEMO_ADMIN_COOKIE)?.value;
+    if (session === getDemoAdminPassword()) return;
+    throw new Error("Unauthorized: Admin access required");
+  }
+
+  const { auth, clerkClient } = await getClerkAuth();
   const authObj = await auth();
 
-  // Try to get role from session claims first
-  let role = authObj.sessionClaims?.metadata?.role || authObj.sessionClaims?.publicMetadata?.role;
+  let role =
+    authObj.sessionClaims?.metadata?.role ||
+    authObj.sessionClaims?.publicMetadata?.role;
 
-  // Fallback to fetching directly from Clerk if necessary
   if (!role && authObj.userId) {
     try {
       const client = await clerkClient();
@@ -35,26 +53,32 @@ export async function verifyAdmin() {
  */
 export async function checkAdminStatus() {
   try {
+    if (!isClerkEnabled()) {
+      const jar = await cookies();
+      const session = jar.get(DEMO_ADMIN_COOKIE)?.value;
+      return { isAdmin: session === getDemoAdminPassword(), mode: "demo" };
+    }
+
+    const { auth, clerkClient } = await getClerkAuth();
     const authObj = await auth();
-    if (!authObj.userId) return { isAdmin: false };
+    if (!authObj.userId) return { isAdmin: false, mode: "clerk" };
 
-    // Try to get role from session claims first
-    let role = authObj.sessionClaims?.metadata?.role || authObj.sessionClaims?.publicMetadata?.role;
+    let role =
+      authObj.sessionClaims?.metadata?.role ||
+      authObj.sessionClaims?.publicMetadata?.role;
 
-    // Fallback to fetching directly from Clerk if necessary
     if (!role) {
       const client = await clerkClient();
       const user = await client.users.getUser(authObj.userId);
       role = user.publicMetadata?.role;
     }
 
-    return { isAdmin: role === "admin" };
+    return { isAdmin: role === "admin", mode: "clerk" };
   } catch (error) {
     console.error("Error checking admin status:", error);
     return { isAdmin: false, error: error.message };
   }
 }
-
 /**
  * Update plot status (Available, Reserved, Sold)
  */
@@ -357,10 +381,10 @@ export async function getSiteInfo() {
     let info = await SiteInfo.findOne().lean();
     if (!info) {
       info = {
-        businessName: "Ugadi Ventures",
-        supportEmail: "contact@ugadiventures.com",
+        businessName: "Tronx",
+        supportEmail: "videshthota889@gmail.com",
         officeAddress: "123 Real Estate Plaza, Commercial Road, Kurnool, Andhra Pradesh",
-        primaryPhone: "+91 98765 43210",
+        primaryPhone: "+91 63050 03695",
         workingHours: "Mon - Sat | 9:00 AM - 7:00 PM",
       };
     }
@@ -377,7 +401,6 @@ export async function getSiteInfo() {
  */
 export async function updateSiteInfo(data) {
   try {
-    const authObj = await auth();
     await verifyAdmin();
     await dbConnect();
     const SiteInfo = (await import("@/models/SiteInfo")).default;
@@ -385,7 +408,7 @@ export async function updateSiteInfo(data) {
     // Use upsert to create if it doesn't exist, update if it does.
     const updatedInfo = await SiteInfo.findOneAndUpdate(
       {}, // Empty filter matches first document
-      { ...data, updatedBy: authObj.userId },
+      { ...data },
       { new: true, upsert: true, setDefaultsOnInsert: true }
     );
 

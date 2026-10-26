@@ -39,12 +39,12 @@ async function update() {
       ]
     };
 
-    const result = await Project.updateOne({ slug: "ugadi-ventures" }, { $set: updateData });
+    const result = await Project.updateOne({ slug: "vinnu-ventures" }, { $set: updateData });
     
     if (result.matchedCount > 0) {
-      console.log("Successfully updated hero images and gallery for Ugadi Ventures.");
+      console.log("Successfully updated hero images and gallery for Vinnu Ventures.");
     } else {
-      console.error("Project 'ugadi-ventures' not found.");
+      console.error("Project 'vinnu-ventures' not found.");
     }
 
     process.exit(0);

@@ -111,7 +111,7 @@ export default function ProjectForm({ project, onClose }) {
                   setFormData({ ...formData, name: e.target.value })
                 }
                 className="w-full px-5 py-3 rounded-2xl border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#1B4332]/5 font-inter"
-                placeholder="Ugadi Ventures II"
+                placeholder="Vinnu Ventures"
               />
             </div>
 
@@ -126,7 +126,7 @@ export default function ProjectForm({ project, onClose }) {
                   setFormData({ ...formData, slug: e.target.value })
                 }
                 className="w-full px-5 py-3 rounded-2xl border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#1B4332]/5 font-inter text-sm"
-                placeholder="ugadi-ventures-ii"
+                placeholder="vinnu-ventures"
               />
             </div>
 
